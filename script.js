@@ -78,5 +78,22 @@ function playGame(rounds){
   }
 }
 
-playGame(5);
+let button = document.querySelector("button");
+// button.addEventListener('click', () => {
+//   playGame(5); // Pass the number of rounds as an argument
+// });
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const playButton = document.getElementById("playButton");
+  const rpsButtons = document.getElementById("rpsButtons");
+
+  playButton.addEventListener('click', () => {
+    // Hide the play button
+    playButton.classList.add('hidden');
+
+    // Show the rock-paper-scissors buttons
+    rpsButtons.classList.remove('hidden');
+  });
+});
