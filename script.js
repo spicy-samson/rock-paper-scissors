@@ -63,7 +63,9 @@ function playRound(humanChoice, compChoice) {
     default:
       console.log('invalid choice!');
       
-  }
+  } 
+  console.log(`Your score: ${humanScore}`);
+  console.log(`Computer score: ${computerScore}`);
 }
 
 function playGame(rounds){
@@ -72,8 +74,6 @@ function playGame(rounds){
     let humanChoice = getHumanChoice(arr);
     let computerChoice = getComputerChoice(arr);
     playRound(humanChoice, computerChoice);
-    console.log(`Your score: ${humanScore}`);
-    console.log(`Computer score: ${computerScore}`);
     n += 1;
   }
 }
